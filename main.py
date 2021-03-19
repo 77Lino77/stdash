@@ -86,7 +86,8 @@ start_year, start_month, start_day = input("다음과 같이 시작 날짜를 �
 # start_year='2021'
 # start_month = '1'
 # start_day = '1'
-
+ID = os.environ['ID']
+PW = os.environ['PW']
 end_month = '1'
 end_day = '1'
 
@@ -110,8 +111,8 @@ driver.implicitly_wait(3)
 driver.get('http://10.52.100.220/accounts/login/')
 
 # target website 로그인 하기
-driver.find_element_by_name('email').send_keys('yangjw@jiran.com')
-driver.find_element_by_name('password').send_keys('YJw035512#')
+driver.find_element_by_name('email').send_keys(ID)
+driver.find_element_by_name('password').send_keys(PW)
 driver.find_element_by_xpath('//*[@id="login"]/div/div/button').click()
 driver.implicitly_wait(3)
 # 로그 탭 클릭
