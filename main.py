@@ -11,13 +11,13 @@ def make_folder(folder_name):
     if not os.path.isdir(folder_name):
         os.mkdir(folder_name)
 
-
+# 기존 파일을 목표하는 곳으로 보내는 함수
 def move_file(source, destination):
     files = os.listdir(source)
     for f in files:
         shutil.move(source+'//'+ f, destination+'//'+ f)
 
-
+# 게시물이 생겨난 일시를 폴더로 생성하는 
 def make_file(date, id, count, path):
     f = open(path + "//"+ str(count) + ".txt", 'a')
     data = "일시 : " + date + " task_id: " + id
