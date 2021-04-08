@@ -6,7 +6,7 @@ import re
 import shutil
 
 
-# 폴더정보를 넘겨주면 해당 폴더가 있는지 확인해서 폴더가 존재하지 않을 경우 폴더 생성
+# 폴더정보를 넘겨주면 해당 폴더가 있는지 확인해서 폴더가 존재하지 않을 경우 폴더 생성하는 함수
 def make_folder(folder_name):
     if not os.path.isdir(folder_name):
         os.mkdir(folder_name)
