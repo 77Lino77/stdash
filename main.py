@@ -83,13 +83,15 @@ def down_onepage(count):
 
 start_year, start_month, start_day = input("다음과 같이 시작 날짜를 입력해주세요.ex) 2021 3 1").split(" ")
 
+end_year, end_month, end_day = input("다음과 같이 시작 날짜를 입력해주세요.ex) 2021 3 1").split(" ")
+
 # start_year='2021'
 # start_month = '1'
 # start_day = '1'
 ID = os.environ['ID']
 PW = os.environ['PW']
-end_month = '1'
-end_day = '1'
+# end_month = '1'
+# end_day = '1'
 
 # 셀레니움 라이브러리 기본 작업
 chrome_options = webdriver.ChromeOptions()
@@ -108,7 +110,7 @@ driver.set_window_size(1200, 800)
 driver.implicitly_wait(3)
 
 # target 페이지 가져오기
-driver.get('http://10.52.100.220/accounts/login/')
+driver.get('TARGET_PAGE')
 
 # target website 로그인 하기
 driver.find_element_by_name('email').send_keys(ID)
